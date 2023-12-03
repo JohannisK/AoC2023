@@ -1,4 +1,4 @@
-package nl.johannisk.days;
+package nl.johannisk.day1;
 
 import nl.johannisk.support.ChallengeFile;
 
@@ -22,7 +22,7 @@ public class Day1b {
             "nine","9");
 
     public static void main(String[] args) {
-        Integer result = new ChallengeFile("day1.txt")
+        Integer result = new ChallengeFile("day1/input.txt")
                 .readLines().stream()
                 .map(e -> replaceWrittenNumberWithIntegerAtIndex(e, (needle, haystack) -> haystack.indexOf(needle)))
                 .map(e -> replaceWrittenNumberWithIntegerAtIndex(e, (needle, haystack) -> haystack.lastIndexOf(needle)))

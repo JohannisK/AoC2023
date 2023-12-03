@@ -22,4 +22,12 @@ public class ChallengeFile {
             throw new RuntimeException(e);
         }
     }
+
+    public String readAll() {
+        try {
+            return Files.readString(Paths.get(Objects.requireNonNull(ChallengeFile.class.getClassLoader().getResource(filename)).toURI()));
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
